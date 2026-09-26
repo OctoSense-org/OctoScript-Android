@@ -2,12 +2,14 @@
 
 [English](README.md) | 简体中文
 
+> **要开发 OctoSense 应用？** 你不需要这个仓库：它是把 OctoScript 渲染为 Android 原生控件的研究型渲染器，与 OctoSense 脚本应用和 App Hub 是两条不同的路径。请按 [OctoSense 组织主页](https://github.com/OctoSense-org)给出的顺序阅读：[OctoScript-App-Design-Flow `AGENTS.md`](https://github.com/OctoSense-org/OctoScript-App-Design-Flow/blob/main/AGENTS.md) → [`flows/README.md`](https://github.com/OctoSense-org/OctoScript-App-Design-Flow/blob/main/flows/README.md) → [`docs/QUICKSTART.md`](https://github.com/OctoSense-org/OctoScript-App-Design-Flow/blob/main/docs/QUICKSTART.md)。
+
 ## 共享的 Octoscript-Makepad 运行时
 
 `native-runtime.lock.json` 选定一个
 [Octoscript-Makepad](https://github.com/OctoSense-org/Octoscript-Makepad)
 发布版本。该版本的 `runtime.json` 负责锁定确切的 Makepad 和 Octoscript 版本，
-AppCards、Mail 以及其他 OctoSense 应用共用同一份。
+OctoSense 外壳、App Hub 的 `card-host`、Mail 以及其他 OctoSense 应用共用同一份。
 
 构建之前先运行 `python3 tools/setup-native.py`（需要 Python 3.9+）。框架仓库与本应用
 并列存放：`../octoscript-makepad`、`../makepad` 和 `../octoscript`。本地改动会被保留；
@@ -55,7 +57,7 @@ OpenHarmony 提供 `arkui/native_node.h`——一套用于构建控件的 C NDK�
 托管对象之下没有原生层。因此 Octoscript-OH 那 2.5–3 倍的构建速度优势无法照搬过来；
 这里的设计目标是*尽量减少跨边界调用*，而不是避开托管语言对象。
 
-完整分析见 octos-one 的 `docs/`（`OCTOSCRIPT-ANDROID-NATIVE-WIDGETS.md`）。
+完整分析（`OCTOSCRIPT-ANDROID-NATIVE-WIDGETS.md`）在 octos-one 中，该仓库未公开。
 
 ## catalog/
 
