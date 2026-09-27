@@ -17,6 +17,11 @@ OctoSense 外壳、App Hub 的 `card-host`、Mail 以及其他 OctoSense 应用�
 用 `python3 tools/setup-native.py --check --cargo-manifest catalog/rust/Cargo.toml`
 检查本地依赖图。现有的各平台渲染后端仍然属于各自的应用；框架负责的是共享的 VM 和 UI 源码。
 
+**已知差异：** 目前锁文件（以及对应的 Cargo 版本）选定的是 Octoscript-Makepad `b1596d9c`，
+它不在该仓库的 `main` 上；其他 OctoSense 使用方都在 `463e3da8`（makepad `cd812acd`）。
+在 [#4](https://github.com/OctoSense-org/OctoScript-Android/issues/4) 修复之前，请把本仓库放在单独的工作区里准备，不要和
+OctoScript-App-Design-Flow 的 checkout 放在一起。
+
 
 用 Rust 把 Octoscript DSL 渲染成 **Android 原生控件**——它是
 [Octoscript-OH](https://github.com/OctoSense-org/Octoscript-OH/blob/master/README.zh-CN.md)
