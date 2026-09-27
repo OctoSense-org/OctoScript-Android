@@ -20,6 +20,12 @@ Use `python3 tools/setup-native.py --check --cargo-manifest catalog/rust/Cargo.t
 to check the local dependency graph. Existing platform rendering backends remain
 part of their applications; the framework controls the shared VM and UI sources.
 
+**Known gap:** the lock (and the matching Cargo revs) currently select
+Octoscript-Makepad `b1596d9c`, which is not on its `main`; the other OctoSense
+consumers are on `463e3da8` (makepad `cd812acd`). Until [#4](https://github.com/OctoSense-org/OctoScript-Android/issues/4)
+is fixed, prepare this repository in its own workspace rather than beside an
+OctoScript-App-Design-Flow checkout.
+
 
 Octoscript DSL rendered to **native Android widgets** from Rust — the Android peer of
 [Octoscript-OH](https://github.com/OctoSense-org/Octoscript-OH), which does the same against

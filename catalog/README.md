@@ -67,7 +67,8 @@ views. The DSL — not Java — decides what the screen says.
 
 ## VM constraints discovered (the hard-won part)
 
-The makepad-script rev `e1c2164b` that `octoscript-render` pins has three shapes
+The makepad-script rev `e1c2164b` that `octoscript-render` pinned when these were
+found (the runtime is now selected by `native-runtime.lock.json`) has three shapes
 that silently produce a wrong tree rather than an error. All were found by
 host-side probing (`examples/probe.rs`) after they showed up as blank screens:
 

@@ -65,7 +65,8 @@ cd .. && gradle assembleDebug && adb install -r app/build/outputs/apk/debug/app-
 
 ## 发现的 VM 限制（来之不易的部分）
 
-`octoscript-render` 锁定的 makepad-script 版本 `e1c2164b` 有三种写法会悄无声息地
+发现这些问题时，`octoscript-render` 锁定的 makepad-script 版本 `e1c2164b`（如今运行时由
+`native-runtime.lock.json` 选定）有三种写法会悄无声息地
 生成错误的树，而不是报错。三者都是先表现为空白页面，再通过宿主机侧探测
 （`examples/probe.rs`）找出来的：
 
