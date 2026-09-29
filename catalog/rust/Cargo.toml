@@ -9,7 +9,7 @@ name = "octoscript_catalog"
 crate-type = ["cdylib", "rlib"]
 
 [dependencies]
-octoscript-render = { git = "https://github.com/OctoSense-org/Octoscript-Makepad.git", rev = "ff9a65b0145186202f47e6bf79b9f9f259f3cefa" }
+octoscript-render = { git = "https://github.com/OctoSense-org/Octoscript-Makepad.git", rev = "b33f494b963759088edf5785fc626cb8593818ee" }
 jni = "0.21"
 serde_json = "1.0.151"
 ureq = { version = "2", features = ["tls"] }
